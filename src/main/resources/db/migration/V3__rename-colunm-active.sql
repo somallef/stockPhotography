@@ -1,0 +1,1 @@
+alter table images rename column active to available;
