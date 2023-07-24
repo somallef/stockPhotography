@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "stockphotography-8aeaf": {
+      "hosting": {
+        "stockPhotography": [
+          "stockphotography-8aeaf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "stockphotography-8aeaf"
+  }
+}
