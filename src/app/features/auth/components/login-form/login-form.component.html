@@ -1,0 +1,22 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">    
+    <div class="form-floating mt-2">
+        <input type="email" class="form-control" id="email" placeholder="email@email.com" formControlName="email">
+        <label for="email">Email</label>
+    </div>
+    <app-vmessage
+        *ngIf="form.get('email')?.errors?.['required'] || form.get('email')?.errors?.['email']"
+        text="Informe um email válido" 
+    />
+    
+    <div class="form-floating mt-2">
+        <input type="password" class="form-control" id="password" placeholder="Senha" formControlName="password">
+        <label for="password">Senha</label>
+    </div>
+    <app-vmessage
+        *ngIf="form.get('password')?.errors?.['required']"
+        text="Senha é obrigatória" 
+    />
+
+    <button [disabled]="form.invalid" class="mt-2 btn btn-primary w-100 py-2" type="submit">{{submitLabel}}</button>
+</form>

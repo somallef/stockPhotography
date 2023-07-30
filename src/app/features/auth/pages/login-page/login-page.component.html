@@ -1,0 +1,15 @@
+<div class="flex-container">
+
+    <div class="col-sm-4 col-md-4">
+        <app-login-form (formData)="login($event)"/>
+    </div>
+
+    <button class="btn btn-secondary col-4 mt-2" (click)="loginWithGoogle()">
+        Entrar com o Google
+    </button>
+
+    <button class="mt-2 btn btn-outline-primary col-4" routerLink="register">
+        Cadastre-se
+    </button>
+
+</div>
